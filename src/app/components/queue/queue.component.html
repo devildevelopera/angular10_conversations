@@ -1,0 +1,13 @@
+<app-actions-tab class="pos-abs"></app-actions-tab>
+<div class="main-body">
+    <span class="trending-intents">{{ 'trending_intents' | translate }}</span>
+    <div class="intent-body">
+        <span class="intent-tag">Account Inquiry<span class="intent-num">10</span></span>
+        <span class="intent-tag">Login Issue <span class="intent-num">7</span></span>
+        <span class="intent-tag">Frozen Account <span class="intent-num">4</span></span>
+        <span class="intent-tag">Transaction <span class="intent-num">3</span></span>
+    </div>
+    <div class="scroll-area" [ngStyle]="{'height': length === 0? '600px': openArDetail? '460px': '550px'}">
+        <app-card-queue *ngFor="let item of data" [item]="item"></app-card-queue>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<li *ngIf="!isShow" class="call-tab__item" (click)="toggleDropdown()">
+    <span class="call-tab__top-title">+{{length}}</span>
+    <span class="call-tab__bottom-title"> 
+        <span><img src="../../assets/icons/arrow.svg" class="rotate"></span>
+    </span>
+</li>
+<li *ngIf="isShow" class="call-tab__item" (click)="toggleDropdown()" style="background-color: #eff3f5; height: 120%;">
+    <span class="call-tab__top-title-cross">✕</span>
+    <app-more-dropdown [isShow]="isShow"></app-more-dropdown>
+</li>

@@ -1,0 +1,30 @@
+<div class="rectangle">
+    <div>
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+                d="M15.9333 14.396L14.8572 11.2644C15.3759 10.204 15.65 9.02481 15.6519 7.8383C15.6551 5.77521 14.8569 3.82452 13.4043 2.34559C11.9514 0.866336 10.0154 0.0336906 7.95276 0.0010144C5.81397 -0.0328197 3.80361 0.780719 2.29222 2.29207C0.78083 3.80346 -0.032854 5.81379 0.00101635 7.95268C0.0336925 10.0153 0.866338 11.9513 2.34552 13.4042C3.82156 14.854 5.76729 15.652 7.82596 15.6519H7.83827C9.02481 15.65 10.204 15.3759 11.2644 14.8572L14.3961 15.9333C14.5266 15.9782 14.6604 16 14.7926 16C15.107 16 15.4127 15.8766 15.6446 15.6446C15.9741 15.3151 16.0847 14.8367 15.9333 14.396ZM3.5 6C3.5 5.17158 4.17157 4.5 5 4.5H11C11.8284 4.5 12.5 5.17158 12.5 6C12.5 6.82843 11.8284 7.5 11 7.5H5C4.17157 7.5 3.5 6.82843 3.5 6ZM5 5.5C4.72386 5.5 4.5 5.72386 4.5 6C4.5 6.27614 4.72386 6.5 5 6.5H11C11.2761 6.5 11.5 6.27614 11.5 6C11.5 5.72386 11.2761 5.5 11 5.5H5ZM5 8.5C4.17157 8.5 3.5 9.17158 3.5 10C3.5 10.8284 4.17157 11.5 5 11.5H11C11.8284 11.5 12.5 10.8284 12.5 10C12.5 9.17158 11.8284 8.5 11 8.5H5ZM4.5 10C4.5 9.72386 4.72386 9.5 5 9.5H11C11.2761 9.5 11.5 9.72386 11.5 10C11.5 10.2761 11.2761 10.5 11 10.5H5C4.72386 10.5 4.5 10.2761 4.5 10Z"
+                fill="#6D8790" />
+        </svg>
+        <span class="chats">{{item.type | translate }}</span>
+    </div>
+    <div class="dir-row">
+        <div class="in-queue-set">
+            <div class="in-queue">{{ 'in_queue' | translate }}</div>
+            <div class="number">{{item.num}}</div>
+        </div>
+        <div>
+            <div class="in-queue">{{ 'longest_waiting_time' | translate }}</div>
+            <div class="number">
+                <span class="color-orange" *ngIf="item.type === 'Chats'">{{item.time}}</span>
+                <span class="color-green" *ngIf="item.type === 'Calls'">{{item.time}}</span>
+                <span class="color-red" *ngIf="item.type === 'Emails'">{{item.time}}</span>
+                <span class="arrow" *ngIf="item.up">↑</span>
+                <span class="arrow" *ngIf="!item.up">↓</span>
+            </div>
+        </div>
+    </div>
+    <div class="skills">{{ 'skills' | translate}}</div>
+    <div>
+        <span class="skill-tag" *ngFor="let skill of item.skills">{{skill}}</span>
+    </div>
+</div>

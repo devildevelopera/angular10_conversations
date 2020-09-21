@@ -1,0 +1,8 @@
+<div class="search-bar" *ngIf="_isVisible" [@inOutAnimation]>
+    <div class="search-bar__left">
+        <img src="../../assets/icons/search main.svg">
+        <input type="text" id="_search"/>
+        <button (click)="searchStart()">{{ 'searchbar.search' | translate }}</button>
+    </div>
+    <button class="search-bar__close-btn" (click)="searchCancel()">{{ 'searchbar.close' | translate }}</button>
+</div>

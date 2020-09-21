@@ -1,0 +1,20 @@
+.open-chatbox{
+    width: 554px;
+    background: var(--background-color);
+    height: 769px;
+    padding: 1px;
+
+    .open-chatbox__header{
+
+    }
+
+    .open-chatbox__body {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: #F6FAFB;
+        margin-left: 3px;
+        margin-right: 3px;
+        position: relative;
+        height: calc(100% - 44px);
+    }
+}

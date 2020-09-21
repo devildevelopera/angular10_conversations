@@ -1,0 +1,137 @@
+.more-dropdown {
+    display: inline-flex;
+    position: relative;
+
+    .sub-title {
+        width: calc(100% - 20px);
+        padding: 10px;
+        background-color: #eff3f5;
+        color: #517785;
+        font-family: "DM Sans";
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.7px;
+        line-height: 13px;
+    }
+   
+    ul{        
+        position: absolute;
+        list-style: none;
+        margin-top: -8px;
+        margin-right:0;
+        right: -48px;
+        padding:0px;
+        border: 1px solid rgba(109,135,144,0.15);        
+        border-radius: 10px 0px 10px 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 2px 0 rgba(109,135,144,0.06);
+        width: 546px;
+        z-index: 99;
+
+        li {
+            color: #000000;
+            font-family: "DM Sans";
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 17px;
+            border-bottom: 1px solid #6D879015;
+            /* opacity: 0.15; */   
+            cursor: pointer;
+            padding-left: 10.5px;
+            padding-right: 10.5px;
+    
+            .item-css {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 44px; 
+    
+                .item-right {
+                    float: right;
+                    color: #5b7f8c;
+                    font-size: 12px;
+        
+                    .item-time {
+                        float: right;
+                        color: #517785;
+                        font-family: "DM Sans";
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 0;
+                        line-height: 16px;
+                        text-align: right;
+                    }
+            
+                    .deferred-font {
+                        color: #C26524;
+                        font-family: "DM Sans";
+                        font-size: 12px;
+                        font-weight: bold;
+                        letter-spacing: -0.2px;
+                        line-height: 16px;
+                        text-align: right;
+                    }
+                }
+                .main-text {
+                    color: #1C323F;
+                    font-family: "DM Sans";
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 0;
+                    line-height: 18px;
+                }
+        
+                button.ongoing-btn{
+                    margin-left: 7px;
+                    padding: 2.4px 7px 3.6px 7px;
+                    border: none;
+                    display: inline;            
+                    cursor: pointer;
+                    border-radius: 10px;
+                    background-color: #41C252;
+
+                    span{
+                        color: #FFFFFF;
+                        font-family: "DM Sans";
+                        font-size: 11px;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: 14px;
+                    }
+                }
+                button.deferred-btn{
+                    margin-left: 7px;
+                    padding: 4.4px 6px 7.6px 8px;
+                    border: none;
+                    display: inline;            
+                    cursor: pointer;
+                    border-radius: 5px;
+                    background-color: #219FCF;
+                    box-shadow: inset 0 -2px 0 0 #198FBB;
+
+                    span{
+                        color: #FFFFFF;
+                        font-family: "DM Sans";
+                        font-size: 11px;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: 14px;
+                    }
+                }
+            }
+    
+            & > div > div > span > svg{
+                margin-right: 10px;
+                margin-bottom: -2px;
+                
+                path{
+                    fill: rgb(109,135,144);
+                    opacity: 0.4;
+                }  
+            }
+        }
+    }
+
+
+}

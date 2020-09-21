@@ -1,0 +1,69 @@
+<ul class="actions-tab">
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curTab == 0? true: false}" (click)="setActionTab(0)" (mouseenter)="hoverStatusQueue()" (mouseleave)="hoveroutStatusQueue()">
+        <span class="actions-tab__contain">
+            <svg *ngIf="!hoverQueue" width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2H15C15.5523 2 16 1.55228 16 1C16 0.447715 15.5523 0 15 0H1C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2ZM1 8.007H15C15.5523 8.007 16 8.45471 16 9.007C16 9.55929 15.5523 10.007 15 10.007H1C0.447715 10.007 0 9.55929 0 9.007C0 8.45471 0.447715 8.007 1 8.007ZM1 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H1C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12ZM1 4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H1C0.447715 6 0 5.55228 0 5C0 4.44772 0.447715 4 1 4Z" fill="#BDCCD2"/>
+            </svg>
+            <svg *ngIf="hoverQueue" width="16" height="16" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2H15C15.5523 2 16 1.55228 16 1C16 0.447715 15.5523 0 15 0H1C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2ZM1 8.007H15C15.5523 8.007 16 8.45471 16 9.007C16 9.55929 15.5523 10.007 15 10.007H1C0.447715 10.007 0 9.55929 0 9.007C0 8.45471 0.447715 8.007 1 8.007ZM1 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H1C0.447715 14 0 13.5523 0 13C0 12.4477 0.447715 12 1 12ZM1 4H15C15.5523 4 16 4.44772 16 5C16 5.55228 15.5523 6 15 6H1C0.447715 6 0 5.55228 0 5C0 4.44772 0.447715 4 1 4Z" fill="#429FCA"/>
+            </svg>
+            <span>{{ 'queue' | translate }}</span>
+        </span>
+    </li>
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curTab == 1? true: false}" (click)="setActionTab(1)" (mouseenter)="hoverStatusHistory()" (mouseleave)="hoveroutStatusHistory()">
+        <span class="actions-tab__contain">
+            <svg *ngIf="!hoverHistory" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 3.6 3.6 0 8 0C12.4 0 16 3.6 16 8C16 12.4 12.4 16 8 16C3.6 16 0 12.4 0 8ZM7 9H12V7H9V4H7V9Z" fill="#BDCCD2"/>
+            </svg> 
+            <svg *ngIf="hoverHistory" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 3.6 3.6 0 8 0C12.4 0 16 3.6 16 8C16 12.4 12.4 16 8 16C3.6 16 0 12.4 0 8ZM7 9H12V7H9V4H7V9Z" fill="#429FCA"/>
+            </svg>               
+            <span>{{ 'history' | translate }}</span>
+        </span>
+    </li>
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curTab == 2? true: false}" (click)="setActionTab(2)" (mouseenter)="hoverStatusAnalytics()" (mouseleave)="hoveroutStatusAnalytics()">
+        <span class="actions-tab__contain">
+            <svg *ngIf="!hoverAnalytics" width="16" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C8 0.4 8.4 0 9 0C9.6 0 10 0.4 10 1V15C10 15.6 9.6 16 9 16C8.4 16 8 15.6 8 15V1ZM13 4C12.4 4 12 4.4 12 5V15C12 15.6 12.4 16 13 16C13.6 16 14 15.6 14 15V5C14 4.4 13.6 4 13 4ZM4 9C4 8.4 4.4 8 5 8C5.6 8 6 8.4 6 9V15C6 15.6 5.6 16 5 16C4.4 16 4 15.6 4 15V9ZM0 13C0 12.4 0.4 12 1 12C1.6 12 2 12.4 2 13V15C2 15.6 1.6 16 1 16C0.4 16 0 15.6 0 15V13Z" fill="#BDCCD2"/>
+            </svg>
+            <svg *ngIf="hoverAnalytics" width="16" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C8 0.4 8.4 0 9 0C9.6 0 10 0.4 10 1V15C10 15.6 9.6 16 9 16C8.4 16 8 15.6 8 15V1ZM13 4C12.4 4 12 4.4 12 5V15C12 15.6 12.4 16 13 16C13.6 16 14 15.6 14 15V5C14 4.4 13.6 4 13 4ZM4 9C4 8.4 4.4 8 5 8C5.6 8 6 8.4 6 9V15C6 15.6 5.6 16 5 16C4.4 16 4 15.6 4 15V9ZM0 13C0 12.4 0.4 12 1 12C1.6 12 2 12.4 2 13V15C2 15.6 1.6 16 1 16C0.4 16 0 15.6 0 15V13Z" fill="#429FCA"/>
+            </svg>    
+            <span>{{ 'analytics' | translate }}</span>
+            <div *ngIf="subTabOpen" class="arrow-down"></div>
+        </span>
+    </li>
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curTab == 3? true: false}" (click)="setActionTab(3)" (mouseenter)="hoverStatusHelp()" (mouseleave)="hoveroutStatusHelp()">
+        <span class="actions-tab__contain">
+            <svg *ngIf="!hoverHelp" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 3.6 3.6 0 8 0C12.4 0 16 3.6 16 8C16 12.4 12.4 16 8 16C3.6 16 0 12.4 0 8ZM6 8C6 9.1 6.9 10 8 10C9.1 10 10 9.1 10 8C10 6.9 9.1 6 8 6C6.9 6 6 6.9 6 8ZM8 2C8.9 2 9.8 2.2 10.6 2.6L9.044 4.156C8.283 3.949 7.717 3.949 6.955 4.156L5.4 2.6C6.2 2.2 7.1 2 8 2ZM2.6 5.4C2.2 6.2 2 7.1 2 8C2 8.9 2.2 9.8 2.6 10.6L4.156 9.045C3.949 8.283 3.949 7.717 4.156 6.956L2.6 5.4ZM8 14C7.1 14 6.2 13.8 5.4 13.4L6.956 11.844C7.717 12.051 8.283 12.051 9.045 11.844L10.6 13.4C9.8 13.8 8.9 14 8 14ZM11.844 9.044L13.4 10.6C13.8 9.8 14 8.9 14 8C14 7.1 13.8 6.2 13.4 5.4L11.844 6.955C12.051 7.717 12.051 8.283 11.844 9.044Z" fill="#BDCCD2"/>
+            </svg>
+            <svg *ngIf="hoverHelp" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 3.6 3.6 0 8 0C12.4 0 16 3.6 16 8C16 12.4 12.4 16 8 16C3.6 16 0 12.4 0 8ZM6 8C6 9.1 6.9 10 8 10C9.1 10 10 9.1 10 8C10 6.9 9.1 6 8 6C6.9 6 6 6.9 6 8ZM8 2C8.9 2 9.8 2.2 10.6 2.6L9.044 4.156C8.283 3.949 7.717 3.949 6.955 4.156L5.4 2.6C6.2 2.2 7.1 2 8 2ZM2.6 5.4C2.2 6.2 2 7.1 2 8C2 8.9 2.2 9.8 2.6 10.6L4.156 9.045C3.949 8.283 3.949 7.717 4.156 6.956L2.6 5.4ZM8 14C7.1 14 6.2 13.8 5.4 13.4L6.956 11.844C7.717 12.051 8.283 12.051 9.045 11.844L10.6 13.4C9.8 13.8 8.9 14 8 14ZM11.844 9.044L13.4 10.6C13.8 9.8 14 8.9 14 8C14 7.1 13.8 6.2 13.4 5.4L11.844 6.955C12.051 7.717 12.051 8.283 11.844 9.044Z" fill="#429FCA"/>
+            </svg>
+            <span>{{ 'help' | translate }}</span>
+        </span>
+    </li>
+</ul>
+<ul *ngIf="curTab == 2" class="actions-sub-tab">
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curSubTab == 0? true: false}" (click)="setActionSubTab(0)">
+        <span class="actions-tab__contain">
+            <span>{{ 'my_status' | translate }}</span>
+        </span>
+    </li>
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curSubTab == 1? true: false}" (click)="setActionSubTab(1)">
+        <span class="actions-tab__contain">              
+            <span>{{ 'team_status' | translate }}</span>
+        </span>
+    </li>
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curSubTab == 2? true: false}" (click)="setActionSubTab(2)">
+        <span class="actions-tab__contain">  
+            <span>{{ 'productivity' | translate }}</span>
+        </span>
+    </li>
+    <li class="actions-tab__item" [ngClass]="{'actions-tab__item--active': curSubTab == 3? true: false}" (click)="setActionSubTab(3)">
+        <span class="actions-tab__contain">
+            <span>{{ 'customers' | translate}}</span>
+        </span>
+    </li>
+</ul>

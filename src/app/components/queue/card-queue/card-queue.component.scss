@@ -1,0 +1,97 @@
+.rectangle {
+    width: calc(100% - 32px);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba(174,197,206,0.4);
+    margin-bottom: 5px;
+    padding: 16px 15px;
+
+    .chats {
+        color: #1C323F;
+        font-family: "DM Sans";
+        font-size: 20px;
+        letter-spacing: -0.3px;
+        line-height: 26px;
+        margin-left: 6px;
+        }
+
+    .dir-row {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #ebeff1;
+
+        .in-queue-set {
+            margin-right: 45px;
+        }
+
+        .in-queue {
+            opacity: 0.8;
+            color: #6D8790;
+            font-family: "DM Sans";
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            line-height: 13px;
+        }
+
+        .number {
+            color: #1C323F;
+            font-family: "DM Sans";
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 24px;
+            display: flex;
+
+            .color-orange {
+                color: #EA8C3E;
+            }
+
+            .color-green {
+                color: #459950;
+            }
+            
+            .color-red {
+                color: #D85259;
+            }
+
+            .arrow {
+                color: #219FCF;
+                font-family: "Lucida Grande";
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 17px;
+                margin-top: 3px;
+            }
+        }
+    }
+
+    .skills {
+        opacity: 0.8;
+        color: #6D8790;
+        font-family: "DM Sans";
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        line-height: 13px;
+        margin: 12px 0;
+      }
+      
+    .skill-tag {
+        box-sizing: border-box;
+        border: 1.4px solid rgba(109,135,144,0.1);
+        border-radius: 12px;
+        background-color: rgba(189,204,210,0.4);
+        color: #517785;
+        font-family: "DM Sans";
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 16px;
+        padding: 4px 8px;
+        margin-left: 5px;
+    }
+}

@@ -1,0 +1,106 @@
+:host{
+    width: 100%;
+    margin: 0px 2px;
+    display: block;
+    height: 100%;
+}
+
+.rotate {
+    margin-top: 5px;
+    transform: rotate(90deg);
+}
+
+@mixin pulsing($color) {
+    @keyframes pulsate {
+        0% { background-color: $color;}
+        50% { background-color: lighten($color, 15%); border-color: lighten($color, 15%) }
+        100% { background-color: $color;}
+    }
+}
+
+@include pulsing(#449D44);
+
+.pulse {  
+    color: white;
+    animation: pulsate 1s infinite;
+    margin: 50px;
+}
+
+li.call-tab__item{
+    height: 100%;
+    margin: 0px 0px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #203B4C;
+    display: block;
+    cursor: pointer;
+    
+    .call-tab__top-title{
+        color: #FFFFFF;
+        font-family: "DM Sans";
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 17px;
+        display: block;
+        text-align: center;
+        padding-top: 7px;
+    }
+
+    .call-tab__top-title-cross{
+        color: #5b7f8c;
+        font-family: "DM Sans";
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 17px;
+        display: block;
+        text-align: center;
+        padding-top: 17px;
+        padding-bottom: 10px;
+    }
+
+    .call-tab__bottom-title{
+        vertical-align: middle;
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        
+        svg{
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+
+            path{
+                fill: rgb(109,135,144);
+                opacity: 0.4;
+            }
+        }
+        
+        span{
+            color: #C8E0E9;
+            font-family: "DM Sans";
+            font-size: 13px;
+            letter-spacing: -0.5px;
+            line-height: 17px;
+        }
+    }
+
+    &.call-tab__item--active{
+        background-color: #459950;    
+        
+        .call-tab__bottom-title{
+            svg{
+                path{
+                    fill:white;
+                    opacity: 1;
+                }
+            } 
+
+            span{
+                color: white;
+            }  
+        }
+    }
+}

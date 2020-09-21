@@ -1,0 +1,67 @@
+<app-actions-tab class="pos-abs"></app-actions-tab>
+<div class="result-box">
+    <div class="chart-wrapper">
+        <select class="type-view" name="intent" value="type" required (change)="changeType($event.target.value)">
+            <option value="0">{{ 'all_received' | translate }}</option>
+            <option value="1">{{ 'chats_received' | translate }}</option>
+            <option value="2">{{ 'calls_received' | translate }}</option>
+            <option value="3">{{ 'emails_received' | translate }}</option>
+        </select>
+        <div class="comp-mine">
+            <input type="checkbox" (change)="eventCheck($event.target.checked)">
+            <label for="vehicle1">{{ 'compare_with_my_status' | translate }}</label><br>
+        </div>
+        <canvas baseChart #myChart [datasets]="lineChartFilterData" [labels]="lineChartDisplayLabels"
+            [options]="lineChartOptions" [colors]="lineChartFilterColors" [legend]="lineChartLegend"
+            [chartType]="lineChartType" [plugins]="lineChartPlugins">
+        </canvas>
+        <select class="time-view" name="intent" required (change)="changeTimeType($event.target.value)">
+            <option value="0">{{ 'week' | translate }}</option>
+            <option value="1">{{ 'day' | translate }}</option>
+            <option value="2">{{ 'month' | translate }}</option>
+        </select>
+        <select class="team-view" name="intent" required>
+            <option>{{ "whole_team" | translate }}</option>
+            <option>{{ "small_team" | translate }}</option>
+            <option>{{ "work_team" | translate }}</option>
+        </select>
+    </div>
+    <div class="bottom-part">
+        <div class="block">
+            <div class="name">{{ 'total' | translate }}</div>
+            <div class="count">536</div>
+            <div class="percent"><span class="arrow">↑</span><span class="number">+15.3%</span></div>
+            <div class="count-percent"><span>178</span> +15.3%↑</div>
+        </div>
+        <div class="block">
+            <div class="name">{{ 'new' | translate }}</div>
+            <div class="count">504</div>
+            <div class="percent"><span class="arrow">↑</span><span class="number">+16.1%</span></div>
+            <div class="count-percent"><span>178</span> +15.3%↑</div>
+        </div>
+        <div class="block">
+            <div class="name">{{ 'per_day' | translate }}</div>
+            <div class="count">22.1%</div>
+            <div class="percent red"><span class="arrow">↓</span><span class="number">-2%</span></div>
+            <div class="count-percent"><span>178</span> +15.3%↑</div>
+        </div>
+        <div class="block">
+            <div class="name">{{ 'completed' | translate }}</div>
+            <div class="count">499</div>
+            <div class="percent"><span class="arrow">↑</span><span class="number">+17.9%</span></div>
+            <div class="count-percent"><span>178</span> +15.3%↑</div>
+        </div>
+    </div>
+    <div class="very-bottom">
+        <div class="block">
+            <div class="name">{{ 'busiest_day' | translate }}</div>
+            <div class="time">Thursday</div>
+            <div class="small-time first">Wednesday</div>
+        </div>
+        <div class="block">
+            <div class="name">{{ 'busiest_time' | translate }}</div>
+            <div class="time">9:00am - 12:50pm</div>
+            <div class="small-time second">9:30am - 11:30pm</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+.ar-detail {
+    color: #FFFFFF;
+    background-color: #264f60;
+    padding: 0 6px;
+    margin: 0 3px;
+    z-index: 10;
+
+    .top-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid #3C6E85;
+        padding: 9px 0;
+        
+        .hilda-palmer {
+            color: #FFFFFF;
+            font-family: "DM Sans";
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 21px;
+            margin-right: 10px;
+        }
+
+        .phone-number {
+            color: #FFFFFF;
+            font-family: "DM Sans";
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 20px;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+
+    .below-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 7px 0;
+
+        .rectangle {
+            padding: 4px 7px 4px 8px;
+            border-radius: 4px;
+            background-color: #4284A2;
+            margin-right: 6px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #429FCA;
+            }
+            
+            span {
+                color: #FFFFFF;
+                font-family: "DM Sans";
+                font-size: 12px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 16px;
+              }
+          }
+        
+          .rectangle1 {
+            box-sizing: border-box;
+            border: 1px solid #47819C;
+            padding: 4px 7px 4px 8px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: #429FCA;
+            }
+        
+            span {
+                color: #FFFFFF;
+                font-family: "DM Sans";
+                font-size: 12px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 16px;
+            }
+          }
+    }
+  }

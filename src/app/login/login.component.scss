@@ -1,0 +1,133 @@
+.container-copy {
+    height: 29px;
+    width: 541px;
+    background-color: #4EA8CA;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+
+    .minimize {
+        margin-right: 15px;
+    }
+  }
+
+.open-chatbox{
+    width: 554px;
+    background: #111E26;
+    height: 769px;
+    padding: 1px;
+
+    .open-chatbox__header{
+        padding: 10px 0 11px 10px;
+        display: flex;
+        align-items: center;
+
+         .convergeone {
+             margin-left: 10px;
+         }
+    }
+
+    .open-chatbox__body {
+        background-color: #FFFFFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 685px;
+        margin: 0 3px;
+        padding: 0 3px;
+        
+        .form {
+            text-align: center;
+
+            .one-input {
+                position: relative;
+
+                span{
+                    position: absolute;
+                    top: -10px;
+                    left: 135px;
+                    background-color: #FFFFFF;
+                    padding-left: 3px;
+                    padding-right: 3px;
+                    color: #6D8790;
+                    font-family: "DM Sans";
+                    font-size: 13px;
+                    letter-spacing: 0;
+                    line-height: 17px;
+                }
+
+                input {
+                    box-sizing: border-box;
+                    height: 40px;
+                    width: 290px;
+                    border: 1px solid rgba(109,135,144,0.3);
+                    border-radius: 3px;
+                    background-color: #FFFFFF;
+                    margin-bottom: 15px;
+                    padding-left: 12px;
+                    color: #1C323F;
+                    font-family: "DM Sans";
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0;
+                    line-height: 18px;
+                  }
+            }
+
+            .please-log-in-to-con {
+                color: #1C323F;
+                font-family: "DM Sans";
+                font-size: 20px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 30px;
+                text-align: center;
+                padding-top: 100px;
+                margin-bottom: 30px;
+              }
+        }
+
+        .forgot-password {
+            color: #219FCF;
+            font-family: "DM Sans";
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 17px;
+            margin-left: 126px;
+        }
+
+
+    }
+
+    .open-chatbox__footer {
+        margin: 0 3px;
+
+        .rectangle {
+            height: 40px;
+            width: 548px;
+            border-radius: 0 0 10px 10px;
+            background-color: #219FCF;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            .group-23 {
+                display: flex;
+                align-items: center;
+
+                .log-in {
+                    color: #FFFFFF;
+                    font-family: "DM Sans";
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0;
+                    line-height: 18px;
+                    margin-left: 10px;
+                  }
+              }
+          }
+    }
+}

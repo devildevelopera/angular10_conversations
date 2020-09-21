@@ -1,0 +1,121 @@
+.rectangle {
+    height: 45px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgba(17,30,38,0.1), 0 2px 18px 0 rgba(4,45,69,0.31);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 548px;
+    left: 0;
+
+    svg {
+        padding-left: 10px;
+    }
+
+    .back {
+        color: #219FCF;
+        font-family: "DM Sans";
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 21px;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+}
+
+.result-box {
+    padding: 10px;
+    background-color: #F6FAFB;
+    margin: 0 3px;
+    
+    .search-results {
+        color: #1C323F;
+        font-family: "DM Sans";
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 30px;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+
+    .period {
+        color: #6D8790;
+        font-family: "DM Sans";
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 18px;
+        margin: 10px 0 13px 10px;
+    }
+
+    .scroll-area {
+        height: 220px;
+        overflow-y: scroll;
+    }
+
+    .item-row {
+        padding: 6.5px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+
+        &:hover {
+            background-color: #E6F3F7;
+
+            div {
+                svg path {
+                    fill: #0095DA;
+                }
+
+                .jonathan-brewer {
+                    color: #0095DA;
+                }
+            }
+
+            .account-balance {
+                color: #0095DA;
+            }
+
+            .date {
+                color: #0095DA;
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+
+            .jonathan-brewer {
+                color: #1C323F;
+                font-family: "DM Sans";
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 18px;
+                margin-left: 15px;
+            }
+        }
+
+        .account-balance {
+            color: #517785;
+            font-family: "DM Sans";
+            font-size: 14px;
+            letter-spacing: 0;
+            line-height: 18px;
+        }
+        
+        .date {
+            color: #517785;
+            font-family: "Roboto Mono";
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 16px;
+            text-align: right;
+        }
+    }
+}

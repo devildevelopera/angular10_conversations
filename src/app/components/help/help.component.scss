@@ -1,0 +1,64 @@
+.pos-abs {
+    position: absolute;
+    top: 0;
+    width: 550px;
+    box-shadow: 0 2px 12px 0 rgba(17,30,38,0.1), 0 2px 18px 0 rgba(4,45,69,0.31);
+}
+.help-main {
+    text-align: center;
+    padding: 0 100px;
+
+    .helper-image{
+        margin-top: 115px;
+    }
+
+    .helper-name {
+        color: #1C323F;
+        font-family: "DM Sans";
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 26px;
+        margin-top: 15px;
+    }
+
+    .supervisor {
+        color: #6D8790;
+        font-family: "DM Sans";
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 25px;
+
+        .blue-button {
+            height: 50px;
+            width: 162px;
+            border-radius: 10px;
+            background-color: #219FCF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+
+            svg {
+                position: absolute;
+                left: 14px;
+            }
+            
+            span {
+                color: #FFFFFF;
+                font-family: "DM Sans";
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 12px;
+            }
+        }
+    }
+}

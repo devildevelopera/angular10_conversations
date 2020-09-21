@@ -1,0 +1,13 @@
+<ul class="call-tab" [ngStyle]="{'height': length == 0? '0px': '46px'}">
+    <div class="call-tab__container" *ngFor="let request of activeRequests | slice:0:5; let i = index">
+        <app-voice-tabs *ngIf="request.type=='voice'" [contactinfo]="request" (click)="openDetail(request, i)"
+            [ngClass]="{'activeStatus': open && openid===i}"></app-voice-tabs>
+        <app-chat-tabs *ngIf="request.type=='chat'" [contactinfo]="request" (click)="openDetail(request, i)"
+            [ngClass]="{'activeStatus': open && openid===i}"></app-chat-tabs>
+        <app-email-tabs *ngIf="request.type=='email'" [contactinfo]="request" (click)="openDetail(request, i)"
+            [ngClass]="{'activeStatus': open && openid===i}"></app-email-tabs>
+    </div>
+    <app-more-tabs *ngIf="length > 5" [length]="length-5" style="width: 50%;"></app-more-tabs>
+</ul>
+
+<app-ar-detail *ngIf="open" [name]="name" [phone]="phone"></app-ar-detail>

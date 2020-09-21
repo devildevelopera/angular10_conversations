@@ -1,0 +1,13 @@
+<div class="open-chatbox">
+    <div class="open-chatbox__header">
+        <app-nav-bar></app-nav-bar>
+        <app-call-tab></app-call-tab>
+    </div>
+    <div class="open-chatbox__body" [ngStyle]="{'height': length === 0? 'calc(100% - 44px)': arDetailOpened? 'calc(100% - 177px)': 'calc(100% - 92px)'}">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="open-chatbox__footer">
+
+    </div>
+    <div class="block__elem"></div>
+</div>
